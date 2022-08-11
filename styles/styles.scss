@@ -1,0 +1,148 @@
+$darkCyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$veryDarkBlue: hsl(212, 21%, 14%);
+$darkGrayishBlue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+}
+
+main {
+    background-color: $cream;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card {
+    background-color: $white;
+    width: 21.4375rem;
+    height: 38.125rem;
+    border-radius: 10px;
+    background-image: url('../images/image-product-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-content {
+        padding: 1.5rem;
+
+        h1 {
+            padding-top: 15rem;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            color: $darkGrayishBlue;
+            font-size: 12px;
+            letter-spacing: 5px;
+            font-weight: normal;
+        }
+
+        h1 span {
+            display: none;
+        }
+
+        h1:after {
+            content: 'PERFUME';
+        }
+    
+        h2 {
+            padding-top: 0.75rem;
+            color: $veryDarkBlue;
+            font-size: 32px;
+            line-height: 32px;
+        }
+    
+        p {
+            padding-top: 1rem;
+            color: $darkGrayishBlue;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            line-height: 23px;
+        }
+
+        button {
+            width: 18.4375rem;
+            height: 3rem;
+            color: $white;
+            background-color: $darkCyan;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            background-image: url('../images/icon-cart.svg');
+            background-repeat: no-repeat;
+            background-position: 5.5rem 1rem;
+            padding-left: 16px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: $veryDarkBlue;
+        }
+
+        .prices {
+            margin-top: 1.25rem;
+            margin-bottom: 1rem;
+
+            display: flex;
+            align-items: center;
+            gap: 0px 20px;
+
+            .price {
+                color: $darkCyan;
+                font-size: 32px;
+            }
+
+            .oldprice {
+                font-size: 13px;
+                color: $darkGrayishBlue;
+                text-decoration:line-through;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }    
+}
+
+@media screen and (min-width: 1440px) {
+    div.card {
+        width: 37.5rem;
+        height: 28.125rem;
+        background-image: url('../images/image-product-desktop.jpg');
+        background-size: contain;
+
+        &-content {
+            padding-left: 20.5rem;
+            padding-top: 2rem;
+            
+            h1 {
+                padding-top: 0;
+            }
+
+            h2 {
+                padding-top: 1.25rem;
+            }
+
+            p {
+                padding-top: 1.5rem;
+            }
+
+            button {
+                width: 15rem;
+                background-position: 4rem 1rem;
+            }
+
+            .prices {
+                margin-bottom: 2rem;
+            }
+        }
+    }    
+}
